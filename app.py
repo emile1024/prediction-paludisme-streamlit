@@ -213,6 +213,8 @@ def afficher_application():
         st.session_state.pluie = pluie_defaut
     
         st.session_state.temperature = temperature_defaut
+
+        st.rerun()
     
     # =====================================================
     # ENTRÉES UTILISATEUR
