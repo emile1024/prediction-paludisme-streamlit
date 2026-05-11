@@ -141,6 +141,21 @@ def afficher_application():
     pluie_defaut = valeurs["pluie"]
     
     temperature_defaut = valeurs["temperature"]
+
+    # =====================================================
+    # INITIALISATION SESSION STATE
+    # =====================================================
+    
+    if "incidence" not in st.session_state:
+        st.session_state.incidence = incidence_defaut
+    
+    if "pluie" not in st.session_state:
+        st.session_state.pluie = pluie_defaut
+    
+    if "temperature" not in st.session_state:
+        st.session_state.temperature = temperature_defaut
+
+
     
     # =====================================================
     # CHARGER LE BON MODÈLE
@@ -185,12 +200,12 @@ def afficher_application():
     annee_connue = st.sidebar.number_input(
         "Dernière année connue",
         min_value=2000,
-        value=2022
+        value=st.session_state.annee_connue
     )
     
     incidence_connue = st.sidebar.number_input(
         "Dernière incidence connue",
-        value=incidence_defaut
+        value=st.session_state.incidence
     )
     
     annee_fin = st.sidebar.number_input(
@@ -201,14 +216,30 @@ def afficher_application():
     
     pluie = st.sidebar.number_input(
         "Pluie moyenne annuelle",
-        value=pluie_defaut
+        value=st.session_state.pluie
     )
     
     temperature = st.sidebar.number_input(
         "Température moyenne annuelle",
-        value=temperature_defaut
+        value=st.session_state.temperature
     )
+
+    # =====================================================
+    # BOUTON RESET
+    # =====================================================
     
+    if st.sidebar.button("🔄 Réinitialiser les valeurs"):
+
+    st.session_state.annee_connue = 2022
+
+    st.session_state.incidence = incidence_defaut
+
+    st.session_state.pluie = pluie_defaut
+
+    st.session_state.temperature = temperature_defaut
+
+    st.rerun()
+
     # =====================================================
     # BOUTON PRÉDICTION
     # =====================================================
