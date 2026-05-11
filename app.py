@@ -461,6 +461,7 @@ def afficher_application():
         )
     
         st.caption(
+            "Sources scientifiques : NASA POWER et World Bank. | "
             "Projet de science des données appliquées - Emile Nibasumba"
         )
 
