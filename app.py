@@ -203,13 +203,11 @@ def afficher_application():
     annee_connue = st.sidebar.number_input(
         "Dernière année connue",
         min_value=2000,
-        value=st.session_state.annee_connue,
         key="annee_connue"
     )
     
     incidence_connue = st.sidebar.number_input(
         "Dernière incidence connue",
-        value=st.session_state.incidence,
         key="incidence"
     )
     
@@ -221,13 +219,11 @@ def afficher_application():
     
     pluie = st.sidebar.number_input(
         "Pluie moyenne annuelle",
-        value=st.session_state.pluie,
         key="pluie"
     )
     
     temperature = st.sidebar.number_input(
         "Température moyenne annuelle",
-        value=st.session_state.temperature,
         key="temperature"
     )
 
