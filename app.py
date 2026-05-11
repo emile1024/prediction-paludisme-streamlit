@@ -146,6 +146,9 @@ def afficher_application():
     # INITIALISATION SESSION STATE
     # =====================================================
     
+    if "annee_connue" not in st.session_state:
+        st.session_state.annee_connue = 2022
+    
     if "incidence" not in st.session_state:
         st.session_state.incidence = incidence_defaut
     
