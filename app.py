@@ -214,7 +214,7 @@ def afficher_application():
     annee_fin = st.sidebar.number_input(
         "Année finale",
         min_value=annee_connue + 1,
-        value=2030
+        value=(2030, annee_connue + 1)
     )
     
     pluie = st.sidebar.number_input(
