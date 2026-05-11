@@ -325,16 +325,16 @@ def afficher_application():
         
         st.header(f"Résultats des prévisions pour {pays}")
         
-        for annee, pred in zip(
-            annees,
-            predictions
-        ):
-        
-            st.metric(
-                label=f"Prévision {annee}",
-                value=f"{pred:.2f}"
-        )
-        
+        colonnes = st.columns(len(annees))
+
+        for col, annee, prediction in zip(colonnes, annees, predictions):
+
+            with col:
+
+                st.metric(
+                    label=f"Prévision {annee}",
+                    value=f"{prediction:.2f}"
+                )
          
     # =====================================================
     # GRAPHIQUE DES PRÉVISIONS
