@@ -241,8 +241,6 @@ def afficher_application():
     
         st.session_state.temperature = temperature_defaut
     
-        st.rerun()
-
     # =====================================================
     # BOUTON PRÉDICTION
     # =====================================================
