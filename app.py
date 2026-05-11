@@ -6,6 +6,15 @@ import plotly.express as px
 from datetime import datetime
 
 # =====================================================
+# CONFIGURATION PAGE
+# =====================================================
+
+st.set_page_config(
+    page_title="Prédiction du Paludisme",
+    page_icon="🦟",
+    layout="wide"
+)
+# =====================================================
 # PROTECTION PAR MOT DE PASSE
 # =====================================================
 
