@@ -181,6 +181,20 @@ def afficher_application():
         model = joblib.load(
             "Congo_Dem_Rep_modele_paludisme.pkl"
         )
+
+    # =====================================================
+    # BOUTON RESET
+    # =====================================================
+    
+    if st.sidebar.button("🔄 Réinitialiser les valeurs"):
+
+        st.session_state.annee_connue = 2022
+    
+        st.session_state.incidence = incidence_defaut
+    
+        st.session_state.pluie = pluie_defaut
+    
+        st.session_state.temperature = temperature_defaut
     
     # =====================================================
     # ENTRÉES UTILISATEUR
@@ -227,20 +241,6 @@ def afficher_application():
         key="temperature"
     )
 
-    # =====================================================
-    # BOUTON RESET
-    # =====================================================
-    
-    if st.sidebar.button("🔄 Réinitialiser les valeurs"):
-
-        st.session_state.annee_connue = 2022
-    
-        st.session_state.incidence = incidence_defaut
-    
-        st.session_state.pluie = pluie_defaut
-    
-        st.session_state.temperature = temperature_defaut
-    
     # =====================================================
     # BOUTON PRÉDICTION
     # =====================================================
