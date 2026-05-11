@@ -183,6 +183,24 @@ def afficher_application():
         )
 
     # =====================================================
+    # AFFICHAGE POUR UTILISATEUR
+    # =====================================================
+    
+    st.sidebar.subheader("Variables d'entrée")
+    
+    st.info(
+        """
+        Informations importantes :
+    
+        • Les précipitations représentent des moyennes exprimées en millimètres par jour (mm/jour).
+    
+        • Les températures représentent des moyennes exprimées en degrés Celsius (°C).
+    
+        • L'incidence du paludisme est exprimée en nombre de cas positifs pour 1000 habitants à risque.
+        """
+    )
+
+    # =====================================================
     # BOUTON RESET
     # =====================================================
     
@@ -199,20 +217,6 @@ def afficher_application():
     # =====================================================
     # ENTRÉES UTILISATEUR
     # =====================================================
-    
-    st.sidebar.subheader("Variables d'entrée")
-    
-    st.info(
-        """
-        Informations importantes :
-    
-        • Les précipitations représentent des moyennes exprimées en millimètres par jour (mm/jour).
-    
-        • Les températures représentent des moyennes exprimées en degrés Celsius (°C).
-    
-        • L'incidence du paludisme est exprimée en nombre de cas positifs pour 1000 habitants à risque.
-        """
-    )
     
     annee_connue = st.sidebar.number_input(
         "Dernière année connue",
