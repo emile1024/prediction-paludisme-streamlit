@@ -230,15 +230,15 @@ def afficher_application():
     
     if st.sidebar.button("🔄 Réinitialiser les valeurs"):
 
-    st.session_state.annee_connue = 2022
-
-    st.session_state.incidence = incidence_defaut
-
-    st.session_state.pluie = pluie_defaut
-
-    st.session_state.temperature = temperature_defaut
-
-    st.rerun()
+        st.session_state.annee_connue = 2022
+    
+        st.session_state.incidence = incidence_defaut
+    
+        st.session_state.pluie = pluie_defaut
+    
+        st.session_state.temperature = temperature_defaut
+    
+        st.rerun()
 
     # =====================================================
     # BOUTON PRÉDICTION
